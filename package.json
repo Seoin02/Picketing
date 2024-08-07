@@ -1,6 +1,11 @@
 {
-  "name": "picketing",
+  "name": "frontend-monorepo",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "packages*"
+    ]
+  },
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -23,7 +28,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "typescript": "^5.2.2",
-    "vite": "^5.3.4"
+    "vite": "^5.3.5"
   },
   "packageManager": "yarn@4.4.0"
 }

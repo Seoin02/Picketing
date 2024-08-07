@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "picketing",
+  "version": "1.0.0",
+  "description": "피켓팅: 원하는 티켓을 원하는 순간에 pick 하세요",
+  "icons": {},
+  "author": "a01036270286@gmail.com",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["scripting"],
+  "host_permissions": ["https://*/*", "http://*/*"]
+}
