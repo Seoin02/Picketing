@@ -40,3 +40,6 @@ dist-ssr
 # Build output
 /build/
 /dist/
+
+# Yarn SDKs
+.yarn/sdks/
