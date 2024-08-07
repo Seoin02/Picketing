@@ -43,5 +43,3 @@ dist-ssr
 
 # Yarn SDKs
 .yarn/sdks/
-
-.pnp.cjs

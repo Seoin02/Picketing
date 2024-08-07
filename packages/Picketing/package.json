@@ -1,9 +1,11 @@
 {
-  "name": "fe-monorepo",
+  "name": "picketing",
   "private": true,
-  "workspaces": [
-    "packages*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages*"
+    ]
+  },
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -14,7 +16,8 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "design-system": "*"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
