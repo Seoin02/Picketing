@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "packages/picketing/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "packages/picketing/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
