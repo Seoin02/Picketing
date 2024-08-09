@@ -2,7 +2,8 @@
   "name": "fe-monorepo",
   "private": true,
   "workspaces": [
-    "packages*"
+    "packages/*",
+    "packages/picketing"
   ],
   "version": "0.0.0",
   "type": "module",

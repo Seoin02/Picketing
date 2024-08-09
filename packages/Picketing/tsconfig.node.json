@@ -9,5 +9,5 @@
     "strict": true,
     "noEmit": true
   },
-  "include": ["../Picketing/vite.config.ts"]
+  "include": ["../picketing/vite.config.ts"]
 }
