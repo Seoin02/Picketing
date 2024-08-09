@@ -34,9 +34,9 @@ jobs:
 
         run: |
 
-          vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} > vercel-output.txt
+          vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
 
-          echo "preview_url=$(cat vercel-output.txt)" >> $GITHUB_OUTPUT
+          echo "preview_url=$(cat vercel-output.txt)"
 
       - name: Comment PR with Preview URL
 
