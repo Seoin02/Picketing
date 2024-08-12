@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   mode: 'jit',
-  content: ['../picketing/**/*.{js,ts,jsx,tsx,mdx}', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['../../packages/**/*.{js,ts,jsx,tsx,mdx}', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
       sm: '480px',
