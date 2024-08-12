@@ -46,3 +46,4 @@ node_modules/
 .yarn/sdks/
 
 .pnp.cjs
+*storybook.log
