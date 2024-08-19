@@ -1,5 +1,5 @@
 import React from 'react';
-import Input, { InputProps } from './index';
+import Input, { InputProps } from './Input';
 
 type InputWithIconProps = InputProps & {
   icon: string;
