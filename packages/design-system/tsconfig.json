@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "moduleResolution": "nodenext",
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "nodeNext",
     "jsx": "react",
     "declaration": true,
     "declarationMap": true,
@@ -12,6 +13,6 @@
       "design-system/*": ["src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "tailwind.config.js", "postcss.config.js"],
   "exclude": ["node_modules", "dist"]
 }
