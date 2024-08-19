@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   mode: 'jit',
+  corePlugins: {
+    preflight: true,
+  },
   content: ['../../packages/**/*.{js,ts,jsx,tsx,mdx}', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
