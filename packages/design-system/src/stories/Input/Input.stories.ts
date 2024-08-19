@@ -19,13 +19,13 @@ type Story = StoryObj<InputProps>;
 export const Default: Story = {
   args: {
     invalid: false,
-    className: 'w-4 h-1 border border-gold-50',
+    className: 'w-120 h-8 border border-gold-50 p-1',
   },
 };
 
 export const Invalid: Story = {
   args: {
     invalid: true,
-    className: 'w-4 h-1 border border-red',
+    className: 'w-120 h-8 border border-red p-1',
   },
 };
