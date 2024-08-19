@@ -1,6 +1,6 @@
 import React from 'react';
 
-type InputProps = React.ComponentPropsWithRef<'input'> & {
+export type InputProps = React.ComponentPropsWithRef<'input'> & {
   invalid: boolean;
 };
 
