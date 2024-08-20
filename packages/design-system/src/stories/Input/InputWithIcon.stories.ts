@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import InputWithIcon, { InputWithIconProps } from './InputWithIcon';
-import search from '../assets/white_search.svg';
+import search from '../assets/search_white.svg';
 
 const meta: Meta<typeof InputWithIcon> = {
   title: 'InputWithIcon',
