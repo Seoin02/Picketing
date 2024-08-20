@@ -17,7 +17,7 @@ type Story = StoryObj<CheckboxProps>;
 
 export const Default: Story = {
   args: {
-    className: 'w-5 h-5 border border-gold-50 rounded flex items-center justify-center p-0.5 bg-gold-50',
+    className: 'w-4 h-4 border border-gold-50 rounded flex items-center justify-center',
     onClick: action('clicked'),
   },
 };
