@@ -12,7 +12,7 @@ const InputWithIcon = React.forwardRef<HTMLInputElement, InputWithIconProps>(
     return (
       <div className="w-full flex gap-1">
         <Input className={className} invalid={invalid} ref={ref} />
-        <img src={icon} className={iconStyle} onClick={onClick} />
+        <img src={icon} className={iconStyle} onClick={onClick} alt="search icon" />
       </div>
     );
   }
