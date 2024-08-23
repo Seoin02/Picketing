@@ -1,4 +1,3 @@
-import React from 'react';
 import Option from './Option';
 import OptionList from './OptionList';
 import Trigger from './Trigger';

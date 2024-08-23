@@ -13,7 +13,8 @@
     "baseUrl": "./src",
     "paths": {
       "design-system/*": ["src/*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types", "./src/custom.d.ts"]
   },
   "include": ["src", "tailwind.config.js", "postcss.config.js"],
   "exclude": ["node_modules", "dist"]
