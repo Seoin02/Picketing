@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Dropdown from '../../../design-system/src/stories/Dropdown';
 import fetchServerTime from '../shared/apis/serverTime/api';
+import timeToKoreaTime from '../shared/utils/timeToKoreaTime';
 
 const Popup = () => {
   const [serverTime, setServerTime] = useState<string>('Loading...');
-  const koreaTime = new Date(serverTime);
+  const koreaTime = timeToKoreaTime(serverTime);
 
   useEffect(() => {
     const getServerTime = setInterval(async () => {
@@ -18,9 +19,9 @@ const Popup = () => {
   return (
     <>
       <h1 className="text-sm">
-        해당 페이지의 서버시간은
+        해당 페이지의 서버 시간은
         <br />
-        {koreaTime.toLocaleString().toString().slice(13, 26)}입니다.
+        {koreaTime}입니다.
       </h1>
       <Dropdown title="다른 사이트 서버 시간" width="small" />
     </>
