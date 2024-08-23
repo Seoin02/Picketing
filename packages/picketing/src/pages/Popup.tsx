@@ -4,7 +4,8 @@ import fetchServerTime from '../shared/apis/serverTime/api';
 
 const Popup = () => {
   const [serverTime, setServerTime] = useState<string>('Loading...');
-  console.log(serverTime.slice(17, 26));
+  const koreaTime = new Date(serverTime);
+
   useEffect(() => {
     const getServerTime = setInterval(async () => {
       const time = await fetchServerTime(window.location.href);
@@ -19,7 +20,7 @@ const Popup = () => {
       <h1 className="text-sm">
         해당 페이지의 서버시간은
         <br />
-        {serverTime.slice(17, 26)}입니다.
+        {koreaTime.toLocaleString().toString().slice(13, 26)}입니다.
       </h1>
       <Dropdown title="다른 사이트 서버 시간" width="small" />
     </>
