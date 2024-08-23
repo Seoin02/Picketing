@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import Dropdown from '../../../design-system/src/stories/Dropdown';
-import fetchServerTime from '../shared/apis/serverTime/api';
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
 import timeToKoreaTime from '../shared/utils/timeToKoreaTime';
+import { timeQueries } from '../shared/apis/serverTime/queries';
+import Dropdown from '../../../design-system/src/stories/Dropdown';
 
 const Popup = () => {
-  const [serverTime, setServerTime] = useState<string>('Loading...');
-  const koreaTime = timeToKoreaTime(serverTime);
-
-  useEffect(() => {
-    const getServerTime = setInterval(async () => {
-      const time = await fetchServerTime(window.location.href);
-      setServerTime(time);
-    }, 1000);
-
-    return () => clearInterval(getServerTime);
-  }, []);
+  const { data: timeData } = useQuery({
+    ...timeQueries.queryOptions(window.location.href),
+  });
+  const koreaTime = timeToKoreaTime(timeData || 'isLoading');
 
   return (
     <>
