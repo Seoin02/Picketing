@@ -12,10 +12,9 @@
     "esModuleInterop": true,
     "baseUrl": "./src",
     "paths": {
-      "design-system/*": ["src/*"]
-    },
-    "typeRoots": ["./node_modules/@types", "./src/custom.d.ts"]
+      "design-system/*": ["./src/*"]
+    }
   },
-  "include": ["src", "tailwind.config.js", "postcss.config.js"],
+  "include": ["src", "tailwind.config.js", "postcss.config.js", "src/custom.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
