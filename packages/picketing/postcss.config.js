@@ -3,7 +3,4 @@ import autoprefixer from 'autoprefixer';
 
 export default {
   plugins: [tailwindcss('./tailwind.config.js'), autoprefixer()],
-  'postcss-modules': {
-    scopeBehaviour: 'global',
-  },
 };

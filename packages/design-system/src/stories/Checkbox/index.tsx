@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import check from '../assets/check_white.svg';
 
 export type CheckboxProps = React.ComponentPropsWithoutRef<'input'> & {
   className: string;
@@ -19,7 +18,7 @@ const Checkbox = ({ className, onClick, ...props }: CheckboxProps) => {
       <div className={className}>
         {isChecked ? (
           <div className="w-4 h-4 bg-gold-50 border border-gold-50 rounded">
-            <img src={check} className="w-4 h-4" alt="check icon" />
+            <img src="check.svg" className="w-4 h-4" alt="check icon" />
           </div>
         ) : (
           ''

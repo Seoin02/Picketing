@@ -1,4 +1,3 @@
-import React from 'react';
 import { useListOpenState } from './hooks/useListOpen';
 
 export type TriggerProps = {

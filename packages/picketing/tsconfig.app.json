@@ -23,5 +23,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
-  }
+  },
+  "include": ["../picketing/vite.config.ts", "../design-system/src/stories/**/*", "src/custom.d.ts"]
 }

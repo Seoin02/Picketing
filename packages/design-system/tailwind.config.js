@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const designSystemConfig = {
   mode: 'jit',
   corePlugins: {
     preflight: true,
   },
-  content: ['../../packages/**/*.{js,ts,jsx,tsx,mdx}', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['../picketing/src/**/*.{js,ts,jsx,tsx,mdx}', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
       sm: '480px',
@@ -55,3 +55,5 @@ export default {
   },
   plugins: [],
 };
+
+export default designSystemConfig;
