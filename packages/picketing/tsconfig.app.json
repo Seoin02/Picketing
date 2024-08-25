@@ -24,5 +24,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["../picketing/vite.config.ts", "../design-system/src/stories/**/*"]
+  "include": ["../picketing/vite.config.ts", "../design-system/src/stories/**/*", "src/custom.d.ts"]
 }
