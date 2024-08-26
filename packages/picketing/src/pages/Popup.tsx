@@ -44,14 +44,14 @@ const Popup = () => {
   const koreaTime = timeToKoreaTime(timeData || 'loading...');
 
   return (
-    <>
-      <h1 className="text-sm">
+    <div className="w-44 h-60 flex-col items-center justify-center p-2">
+      <p className="text-sm">
         해당 페이지의 서버 시간은
         <br />
-        {koreaTime}입니다.
-      </h1>
+        <span className="text-red font-bold">{koreaTime}</span>입니다.
+      </p>
       <Dropdown title="다른 사이트 서버 시간" width="small" />
-    </>
+    </div>
   );
 };
 
