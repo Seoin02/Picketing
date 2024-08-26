@@ -9,14 +9,14 @@
     "default_popup": "index.html"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "assets/background-DYuixrSf.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "ts": ["contentScript.js"]
+      "js": ["assets/contentScript-Dic35iIh.js"]
     }
   ],
-  "permissions": ["scripting"],
+  "permissions": ["activeTab", "scripting"],
   "host_permissions": ["https://*/*", "http://*/*"]
 }

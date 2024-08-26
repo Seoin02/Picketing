@@ -10,11 +10,10 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": false,
     "jsx": "react-jsx",
     "types": ["vite/client", "@vitejs/plugin-react"],
 
@@ -24,5 +23,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["../picketing/vite.config.ts", "../design-system/src/stories/**/*", "src/custom.d.ts"]
+  "include": ["../picketing/vite.config.js", "../design-system/src/stories/**/*", "src/custom.d.ts"]
 }

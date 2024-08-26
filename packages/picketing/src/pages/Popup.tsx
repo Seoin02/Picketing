@@ -8,10 +8,19 @@ const Popup = () => {
   const [url, setUrl] = useState<string | null>(null);
 
   useEffect(() => {
+    if (typeof chrome === 'undefined' || !chrome.runtime) {
+      console.error('chrome API is not available');
+      return;
+    }
+
     const port = chrome.runtime.connect({ name: 'popup' });
 
     const handleMessage = ({ url }: { url: string }) => setUrl(url);
     port.onMessage.addListener(handleMessage);
+
+    return () => {
+      port.onMessage.removeListener(handleMessage);
+    };
   }, []);
 
   const {
@@ -20,7 +29,17 @@ const Popup = () => {
     error,
   } = useQuery<string>({
     ...timeQueries.queryOptions(url || 'loading...'),
+    enabled: !!url,
   });
+
+  if (isLoading) {
+    return <div>서버 시간을 불러오는 중입니다.</div>;
+  }
+
+  if (error) {
+    console.error('Error fetching server time:', error);
+    return <div>서버 시간을 불러오는 데 실패했습니다.</div>;
+  }
 
   const koreaTime = timeToKoreaTime(timeData || 'loading...');
 
@@ -29,7 +48,7 @@ const Popup = () => {
       <h1 className="text-sm">
         해당 페이지의 서버 시간은
         <br />
-        {isLoading ? 'loading...' : error ? '에러 발생' : koreaTime}입니다.
+        {koreaTime}입니다.
       </h1>
       <Dropdown title="다른 사이트 서버 시간" width="small" />
     </>
