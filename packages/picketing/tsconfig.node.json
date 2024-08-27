@@ -10,5 +10,5 @@
     "strict": true,
     "noEmit": true
   },
-  "include": ["../picketing/vite.config.ts", "../design-system/src/stories/**/*"]
+  "include": ["../picketing/vite.config.js", "../design-system/src/stories/**/*"]
 }

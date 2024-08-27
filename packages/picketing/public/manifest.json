@@ -8,6 +8,15 @@
   "action": {
     "default_popup": "index.html"
   },
-  "permissions": ["scripting"],
+  "background": {
+    "service_worker": "assets/background-DYuixrSf.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["assets/contentScript-Dic35iIh.js"]
+    }
+  ],
+  "permissions": ["activeTab", "scripting"],
   "host_permissions": ["https://*/*", "http://*/*"]
 }
