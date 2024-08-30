@@ -3,9 +3,20 @@ import { useQuery } from '@tanstack/react-query';
 import timeToKoreaTime from '../shared/utils/timeToKoreaTime';
 import { timeQueries } from '../shared/apis/serverTime/queries';
 import Dropdown from '../../../design-system/src/stories/Dropdown';
+import useServerTimeStore from '../shared/store';
 
 const Popup = () => {
   const [url, setUrl] = useState<string | null>(null);
+
+  const intervals = useServerTimeStore(state => state.interval);
+  const setIntervals = useServerTimeStore(state => state.setInterval);
+
+  const handleIntervalChange = e => {
+    const newInterval = parseInt(e.target.value, 10);
+    setIntervals(newInterval);
+
+    chrome.runtime.sendMessage({ type: 'SET_INTERVAL', interval: newInterval });
+  };
 
   useEffect(() => {
     if (typeof chrome === 'undefined' || !chrome.runtime) {
@@ -50,7 +61,12 @@ const Popup = () => {
         <br />
         <span className="text-red font-bold">{koreaTime}</span>입니다.
       </p>
-      <Dropdown title="다른 사이트 서버 시간" width="small" />
+      {/* <Dropdown title="다른 사이트 서버 시간" width="small" /> */}
+      <select value={intervals} onChange={handleIntervalChange}>
+        <option value={1}>1분 후 알림</option>
+        <option value={2}>2분 후 알림</option>
+        <option value={3}>3분 후 알림</option>
+      </select>
     </div>
   );
 };
