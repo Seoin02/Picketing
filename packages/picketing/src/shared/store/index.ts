@@ -6,7 +6,7 @@ export type ServerTimeState = {
 };
 
 const useServerTimeStore = create<ServerTimeState>(set => ({
-  interval: 1,
+  interval: 0,
   setInterval: (newInterval: number) => set({ interval: newInterval }),
 }));
 
