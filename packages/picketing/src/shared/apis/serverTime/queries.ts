@@ -12,7 +12,7 @@ export const timeQueries = {
     return {
       queryKey: timeQueries.getQueryKey(url),
       queryFn: () => fetchServerTime(url),
-      refetchInterval: 1000,
+      refetchInterval: 500,
     };
   },
 };

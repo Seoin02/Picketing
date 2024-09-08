@@ -1,8 +1,13 @@
 import { create } from 'zustand';
 
-const useServerTimeStore = create(set => ({
-  serverTimes: 0,
-  setServerTimes: (time: number) => set({ serverTimes: time }),
+export type ServerTimeState = {
+  interval: number;
+  setInterval: (interval: number) => void;
+};
+
+const useServerTimeStore = create<ServerTimeState>(set => ({
+  interval: 0,
+  setInterval: (newInterval: number) => set({ interval: newInterval }),
 }));
 
 export default useServerTimeStore;

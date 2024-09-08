@@ -3,20 +3,21 @@
   "name": "picketing",
   "version": "1.0.0",
   "description": "피켓팅: 원하는 티켓을 원하는 순간에 pick 하세요",
-  "icons": {},
+  "icons": { "16": "assets/clock.png" },
   "author": "a01036270286@gmail.com",
   "action": {
     "default_popup": "index.html"
   },
   "background": {
-    "service_worker": "assets/background-DYuixrSf.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["assets/contentScript-Dic35iIh.js"]
+      "js": ["contentScript.js"]
     }
   ],
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting", "notifications", "alarms"],
   "host_permissions": ["https://*/*", "http://*/*"]
 }
