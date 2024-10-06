@@ -84,7 +84,7 @@ const Popup = () => {
           <br />
           🐥알림을 받을 수 있어요🐥
         </h2>
-        <button>개발자에게 피드백 남기기</button>
+        {/* <button>개발자에게 피드백 남기기</button> */}
         <a href="https://github.com/Seoin02?tab=repositories" target="_blank" className="text-gray-50">
           ⓒSeoin02
         </a>
